@@ -5,7 +5,7 @@ connectToMongo();
 
 
 const app = express();
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 app.use(express.json());
 
 app.use('/api/createuser', require('./routes/createuser'));
@@ -16,5 +16,6 @@ app.use('/api/delete' , require('./routes/delete'));
 
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  
+  console.log(`Example app listening on port http://localhost:${port}`)
 })
